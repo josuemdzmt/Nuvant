@@ -1,0 +1,57 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Action from "@/components/Action.astro";
+import privacyData from "@/data/privacy.json";
+import landingData from "@/data/landing.json";
+
+const meta = {
+  ...landingData.meta,
+  title: privacyData.meta.title,
+  description: privacyData.meta.description,
+  lang: privacyData.meta.lang,
+  charset: privacyData.meta.charset,
+};
+---
+
+<Layout meta={meta}>
+  <header class="w-full flex justify-center h-20 border-b border-slate-200 bg-white">
+    <nav class="flex flex-row items-center justify-between w-11/12 md:w-3/4" aria-label="Navegación">
+      <Action as="a" href="/" title="Nuvant" class="inline-flex items-center">
+        <img src="/logo-nuvant.svg" alt="Nuvant" class="h-8 w-auto" />
+      </Action>
+      <Action as="a" type="text" href="/" class="text-base md:text-lg">
+        Volver al inicio
+      </Action>
+    </nav>
+  </header>
+
+  <main class="flex flex-col items-center px-4 py-16 md:py-24">
+    <article class="w-full max-w-3xl">
+      <h1 class="text-3xl md:text-5xl font-semibold mb-4">{privacyData.title}</h1>
+      <p class="text-sm md:text-base opacity-70 mb-12">
+        Última actualización: {privacyData.lastUpdated}
+      </p>
+      <div class="flex flex-col gap-y-10">
+        {
+          privacyData.sections.map((section) => (
+            <section>
+              <h2 class="text-xl md:text-2xl font-semibold mb-3">{section.heading}</h2>
+              <p class="text-base md:text-lg opacity-90 text-pretty leading-relaxed">
+                {section.body}
+              </p>
+            </section>
+          ))
+        }
+      </div>
+    </article>
+  </main>
+
+  <footer class="flex flex-col items-center gap-y-2 py-8 border-t border-slate-200 text-sm opacity-70">
+    <p>
+      <Action as="a" type="text" href="/">Nuvant</Action>
+      {" · "}
+      <Action as="a" type="text" href="mailto:contacto@nuvant.com">contacto@nuvant.com</Action>
+    </p>
+    <p>Monterrey, Nuevo León, México</p>
+  </footer>
+</Layout>

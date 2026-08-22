@@ -1,35 +1,34 @@
 ---
 import Action from "@/components/Action.astro";
+import type { HeroData } from "@/config/landing.interface";
 
 interface Props {
-  data: {
-    title: string;
-    subTitle: string;
-    primaryCta: string;
-    secondaryCta: string;
-    highlightedTitle?: string;
-  };
+  data: HeroData;
 }
 
 const { data } = Astro.props;
 ---
 
-<section id="hero-section" class="flex justify-center mt-48 h-screen">
-  <div class="md:w-1/2">
-    <h1 class="text-4xl text-center font-semibold md:text-6xl">
-      {data.title}
-      <span class="text-primary"> {data.highlightedTitle} </span>
+<section id="hero-section" class="flex justify-center mt-28 md:mt-40 min-h-[80vh] items-start">
+  <div class="md:w-3/4 lg:w-2/3">
+    <p class="text-center text-sm md:text-base tracking-[0.2em] uppercase text-primary font-semibold mb-6 opacity-90">
+      Consultora tecnológica
+    </p>
+    <h1 class="text-5xl text-center font-semibold md:text-7xl tracking-tight">
+      <span class="text-primary">{data.highlightedTitle}</span>
     </h1>
-    <h2 class="mt-10 text-lg text-center opacity-80 md:text-2xl">
+    <p class="mt-4 text-xl text-center font-medium md:text-3xl text-black/80">
+      {data.title}
+    </p>
+    <h2 class="mt-8 text-lg text-center opacity-80 md:text-xl max-w-2xl mx-auto text-pretty">
       {data.subTitle}
     </h2>
-    <div class="flex justify-evenly mt-10">
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
       <Action
         as="a"
         type="button"
-        class="bg-black text-white"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
+        class="bg-primary text-white"
+        href={data.primaryCtaHref}
       >
         {data.primaryCta}
       </Action>
@@ -37,8 +36,7 @@ const { data } = Astro.props;
         as="a"
         class="bg-transparent text-black border border-black"
         type="button"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
+        href={data.secondaryCtaHref}
       >
         {data.secondaryCta}
       </Action>
@@ -46,9 +44,9 @@ const { data } = Astro.props;
     <div class="flex justify-center">
       <Action
         as="a"
-        class="flex justify-center items-center animate-bounce border-2 border-transparent bg-primary text-white rounded-full w-14 h-14 mt-32 hover:bg-white hover:text-primary hover:border-primary transition"
+        class="flex justify-center items-center animate-bounce border-2 border-transparent bg-primary text-white rounded-full w-14 h-14 mt-24 hover:bg-white hover:text-primary hover:border-primary transition"
         href="#services-section"
-        title="arrow down icon"
+        title="Ir a servicios"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

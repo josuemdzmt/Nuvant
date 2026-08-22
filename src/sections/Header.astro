@@ -11,13 +11,15 @@ const { data } = Astro.props;
 
 <header
   id="navbar"
-  class="w-full transition duration-300 justify-center fixed h-20 z-50 hidden md:flex"
+  class="w-full transition duration-300 justify-center fixed h-16 md:h-20 z-50 flex"
 >
-  <nav aria-label="Main Navigation" class="flex flex-row items-center w-3/4">
-    <div class="text-nowrap">
-      <Action as="a" class="text-xl" href="#">{data.logo}</Action>
+  <nav aria-label="Navegación principal" class="flex flex-row items-center w-11/12 md:w-3/4">
+    <div class="text-nowrap shrink-0">
+      <Action as="a" href="/" class="inline-flex items-center" title={data.logo}>
+        <img src={data.logoImg} alt={data.logo} class="h-7 md:h-8 w-auto" />
+      </Action>
     </div>
-    <ul class="flex flex-row w-full justify-center gap-x-14">
+    <ul class="hidden md:flex flex-row w-full justify-center gap-x-14">
       {
         data.links.map((item) => (
           <li class="text-lg hover:scale-110 hover:opacity-80">
@@ -28,7 +30,16 @@ const { data } = Astro.props;
         ))
       }
     </ul>
-    <span></span>
+    <div class="ml-auto md:ml-0 md:w-24 flex justify-end">
+      <Action
+        as="a"
+        type="button"
+        class="md:hidden bg-primary text-white text-sm px-3 py-1.5"
+        href="mailto:contacto@nuvant.com"
+      >
+        Contactar
+      </Action>
+    </div>
   </nav>
 </header>
 

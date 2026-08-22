@@ -1,0 +1,59 @@
+---
+import Action from "@/components/Action.astro";
+import SectionTitle from "@/components/SectionTitle.astro";
+import type { ContactData } from "@/config/landing.interface";
+
+interface Props {
+  data: ContactData;
+}
+
+const { data } = Astro.props;
+---
+
+<section
+  id="contacto"
+  class="flex flex-col items-center mb-40 md:mb-48 gap-y-10 w-full"
+>
+  <div class="w-full max-w-3xl mx-auto flex flex-col items-center gap-y-5 text-center">
+    <SectionTitle>
+      {data.title}
+    </SectionTitle>
+    <p class="text-lg md:text-xl opacity-90 text-pretty">
+      {data.description}
+    </p>
+  </div>
+
+  <div
+    class="w-full max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center"
+  >
+    <div class="flex flex-col gap-y-2">
+      <p class="text-sm font-semibold uppercase tracking-wide text-primary">
+        Ubicación
+      </p>
+      <p class="text-lg md:text-xl">{data.location}</p>
+    </div>
+    <div class="hidden md:block w-px h-16 bg-black/15" aria-hidden="true"></div>
+    <div class="flex flex-col gap-y-2">
+      <p class="text-sm font-semibold uppercase tracking-wide text-primary">
+        Correo
+      </p>
+      <Action
+        as="a"
+        type="text"
+        href={data.emailHref}
+        class="text-lg md:text-xl"
+      >
+        {data.email}
+      </Action>
+    </div>
+  </div>
+
+  <Action
+    as="a"
+    type="button"
+    class="bg-primary text-white"
+    href={data.ctaHref}
+  >
+    {data.cta}
+  </Action>
+</section>

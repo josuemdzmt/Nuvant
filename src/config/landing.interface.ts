@@ -5,12 +5,25 @@ export interface LandingPageData {
   servicesData: ServicesData;
   adventajesData: AdventajesData;
   brandsData: BrandsData;
-  pricingData: PricingData;
+  casesData: CasesData;
+  trustData: TrustData;
+  contactData: ContactData;
   footerData: FooterData;
+}
+
+export interface ContactData {
+  title: string;
+  description: string;
+  location: string;
+  email: string;
+  emailHref: string;
+  cta: string;
+  ctaHref: string;
 }
 
 export interface HeaderData {
   logo: string;
+  logoImg: string;
   links: Link[];
 }
 
@@ -18,7 +31,9 @@ export interface HeroData {
   title: string;
   subTitle: string;
   primaryCta: string;
+  primaryCtaHref: string;
   secondaryCta: string;
+  secondaryCtaHref: string;
   highlightedTitle: string;
 }
 
@@ -41,14 +56,16 @@ export interface AdventajesData {
 export interface Adventaje {
   title: string;
   description: string;
-  img: string;
-  imageAlt: string;
+  img?: string;
+  imageAlt?: string;
   checks: string[];
 }
 
 export interface FooterData {
   logo: string;
+  logoImg: string;
   description: string;
+  location: string;
   links: Link[];
   socials: Social[];
 }
@@ -71,26 +88,33 @@ export interface BrandsData {
 
 export interface Brand {
   label: string;
-  icon: string;
   href: string;
+  img: string;
+  icon?: string;
 }
 
-export interface PricingData {
-  title: string;
-  tiers: Tier[];
-}
-
-export interface Tier {
+export interface CasesData {
   title: string;
   description: string;
-  price: Price;
-  features: string[];
-  cta: string;
+  cases: CaseItem[];
 }
 
-export interface Price {
-  amount: string;
-  period?: string;
+export interface CaseItem {
+  title: string;
+  sector: string;
+  description: string;
+  status: string;
+  highlights: string[];
+}
+
+export interface TrustData {
+  title: string;
+  items: TrustItem[];
+}
+
+export interface TrustItem {
+  value: string;
+  label: string;
 }
 
 export interface Meta {
@@ -108,10 +132,17 @@ export interface LdJson {
   description: string;
   url: string;
   logo: string;
+  address?: {
+    "@type": string;
+    addressLocality: string;
+    addressRegion: string;
+    addressCountry: string;
+  };
   contactPoint: {
     "@type": string;
     email: string;
     contactType: string;
+    areaServed?: string;
   };
   sameAs: string[];
 }
@@ -125,10 +156,4 @@ export type Icon =
   | "InstagramIcon"
   | "GithubIcon"
   | "TwitterIcon"
-  | "FacebookIcon"
-  | "ReactIcon"
-  | "SvelteIcon"
-  | "SolidIcon"
-  | "VueIcon"
-  | "VercelIcon"
-  | "NetlifyIcon";
+  | "FacebookIcon";

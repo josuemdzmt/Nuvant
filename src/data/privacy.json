@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Aviso de privacidad | Nuvant",
+    "description": "Aviso de privacidad de Nuvant, consultora tecnológica. Información sobre el tratamiento de datos personales conforme a la LFPDPPP.",
+    "lang": "es",
+    "charset": "UTF-8"
+  },
+  "title": "Aviso de privacidad",
+  "lastUpdated": "21 de agosto de 2026",
+  "sections": [
+    {
+      "heading": "1. Identidad y domicilio del responsable",
+      "body": "Nuvant (en adelante, \"Nuvant\", \"nosotros\" o \"el Responsable\"), con domicilio en Monterrey, Nuevo León, México, y correo de contacto contacto@nuvant.com, es responsable del tratamiento de los datos personales que usted nos proporcione a través de este sitio web o por medios de contacto asociados a nuestros servicios."
+    },
+    {
+      "heading": "2. Datos personales que recabamos",
+      "body": "Podemos recabar datos de identificación y contacto que usted nos facilite de forma voluntaria, tales como: nombre completo, correo electrónico, número telefónico, nombre de la organización, cargo y el contenido de su mensaje o solicitud. No solicitamos datos sensibles a través de este sitio. Si en el futuro utilizamos cookies o herramientas de analítica, se informará en este aviso."
+    },
+    {
+      "heading": "3. Finalidades del tratamiento",
+      "body": "Sus datos personales se utilizarán para las siguientes finalidades primarias: (i) atender solicitudes de contacto, cotización o información sobre nuestros servicios de consultoría Salesforce y desarrollo de software a medida; (ii) dar seguimiento a la relación comercial o profesional que se establezca; (iii) enviar comunicaciones relacionadas con su solicitud; y (iv) cumplir obligaciones legales aplicables. De manera secundaria, y solo si usted lo autoriza, podríamos enviarle información sobre servicios o novedades de Nuvant. Usted puede oponerse a las finalidades secundarias en cualquier momento."
+    },
+    {
+      "heading": "4. Transferencias de datos",
+      "body": "Nuvant no vende ni renta sus datos personales. Podremos compartirlos únicamente cuando sea necesario para la prestación del servicio (por ejemplo, proveedores de correo o infraestructura bajo contratos de confidencialidad), cuando lo exija la ley, o con su consentimiento previo. Dichos terceros tratarán los datos conforme a este aviso y a la normativa aplicable."
+    },
+    {
+      "heading": "5. Derechos ARCO y medios para ejercerlos",
+      "body": "Usted puede ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), así como revocar el consentimiento para el tratamiento de sus datos, enviando un correo a contacto@nuvant.com con el asunto \"Derechos ARCO\", indicando su nombre completo, medio de contacto, la descripción clara de su solicitud y, en su caso, documentación que acredite su identidad. Responderemos en los plazos previstos por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento."
+    },
+    {
+      "heading": "6. Uso de cookies y tecnologías similares",
+      "body": "Este sitio puede utilizar cookies técnicas necesarias para su funcionamiento. Si en el futuro se incorporan cookies de analítica o de terceros, se actualizará este aviso y, cuando corresponda, se solicitará su consentimiento conforme a la normativa aplicable."
+    },
+    {
+      "heading": "7. Medidas de seguridad",
+      "body": "Implementamos medidas administrativas, técnicas y físicas razonables para proteger sus datos personales contra daño, pérdida, alteración, destrucción o uso, acceso o tratamiento no autorizado."
+    },
+    {
+      "heading": "8. Cambios al aviso de privacidad",
+      "body": "Nuvant podrá modificar este aviso de privacidad cuando sea necesario. Las actualizaciones se publicarán en esta misma página, indicando la fecha de la última actualización. Le recomendamos revisarlo periódicamente."
+    },
+    {
+      "heading": "9. Contacto",
+      "body": "Para cualquier duda relacionada con el tratamiento de sus datos personales o con este aviso, escríbanos a contacto@nuvant.com. Nuvant opera desde Monterrey, Nuevo León, México."
+    }
+  ]
+}
