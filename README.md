@@ -1,45 +1,152 @@
-![image](https://github.com/JimmyCamus/luna-landing/assets/86853554/7dc4c571-bb33-4e55-ae94-446b056539a0)
+# Nuvant
 
+Sitio web de **Nuvant**, consultora tecnológica con sede en **Monterrey, Nuevo León, México**.
 
+**Slogan:** *Soluciones con sentido de negocio.*
 
+Ofrecemos:
 
-# Luna Landing
+- Consultoría e implementación de **Salesforce** (Sales Cloud, Service Cloud, Field Service, Marketing Cloud, Agentforce)
+- **Desarrollo de software a medida**
+- Administración, optimización y acompañamiento con equipo con experiencia en estas plataformas
 
-Luna Landing is an innovative and highly customizable landing page that allows you to create and modify your website easily and quickly through a JSON file. Harnessing the power of Astro, a modern and efficient web development tool, Luna Landing provides you with an unparalleled development experience, enabling you to focus on your site's design and content without worrying about the complexity of code.
+> Este proyecto **no afirma** ser Salesforce Partner. La experiencia se comunica por trayectoria, certificaciones y dominio de productos.
 
-## Key Features
+---
 
-- Extreme Customization: With Luna Landing, you can customize every aspect of your website, from design to content, using a simple JSON file. Easily change colors, fonts, images, and text without the need for manual code editing.
+## Créditos de la plantilla
 
-- Efficiency and Speed: Thanks to Astro, Luna Landing delivers fast load times and exceptional performance, ensuring a smooth and uninterrupted user experience.
+Este sitio parte de la plantilla **[Luna Landing](https://github.com/JimmyCamus/luna-landing)** de **Jeremy Camus (JimmyCamus)**, licenciada bajo **MIT**.
 
-- Total Adaptability: With support for mobile devices and various screen resolutions, Luna Landing ensures your website looks and functions flawlessly on any device, from smartphones to desktop computers.
+Se reutilizó la base en **Astro + Tailwind + contenido vía JSON**, adaptada y reescrita por completo para la marca y el contenido de Nuvant.
 
-- Scalability and Simplified Maintenance: As your project grows, Luna Landing enables you to scale your website efficiently and seamlessly. Content management via a JSON file makes updating and ongoing maintenance of your website easy.
+El archivo `LICENSE` del repositorio conserva el aviso de copyright original de la plantilla, como exige la licencia MIT.
 
-## Get Started
+---
 
-Start building your dream website with Luna Landing today! Download our template and discover the freedom and flexibility it offers to create a unique and captivating website.
+## Stack
 
-### Prerequisites
+| Tecnología | Uso |
+|------------|-----|
+| [Astro 4](https://astro.build/) | Sitio estático |
+| TypeScript | Tipado |
+| Tailwind CSS | Estilos |
+| Rubik Variable | Tipografía |
 
-```sh
-npm install -g pnpm
+---
+
+## Requisitos
+
+- **Node.js** 18 o superior (recomendado LTS)
+- **npm** (o pnpm, si lo prefieres)
+
+---
+
+## Cómo levantar el proyecto
+
+### 1. Clonar e instalar
+
+```bash
+git clone https://github.com/josuemdzmt/Nuvant.git
+cd Nuvant
+npm install
 ```
 
-### Install dependencies
+Si usas pnpm:
 
-```sh
-pnpm i
+```bash
+pnpm install
 ```
 
-### Run the project
+### 2. Desarrollo local
 
-```sh
-pnpm dev
+```bash
+npm run dev
 ```
 
-## 🛠️ Stack
-- Astro - The web framework for content-driven websites.
-- Typescript - JavaScript with syntax for types.
-- Tailwind CSS - A utility-first CSS framework for rapidly building custom designs.
+Abre [http://localhost:4321/](http://localhost:4321/).
+
+Rutas principales:
+
+| Ruta | Descripción |
+|------|-------------|
+| `/` | Landing |
+| `/privacidad` | Aviso de privacidad |
+
+### 3. Build de producción
+
+```bash
+npm run build
+```
+
+Genera el sitio en `dist/` (HTML comprimido, JS/CSS minificados, sin source maps).
+
+### 4. Previsualizar el build
+
+```bash
+npm run preview
+```
+
+### Otros comandos
+
+```bash
+npm run lint    # ESLint
+```
+
+---
+
+## Estructura importante
+
+```
+src/
+  data/
+    landing.json      # Copy de la landing (textos, links, servicios, casos…)
+    privacy.json      # Contenido del aviso de privacidad
+  pages/
+    index.astro       # Home
+    privacidad.astro  # Aviso de privacidad
+  sections/           # Secciones de la landing
+  components/         # Componentes reutilizables
+  config/             # Tipos TypeScript
+public/
+  brands/             # Iconos de productos Salesforce
+  logo-nuvant.svg
+  favicon.svg
+```
+
+### Editar contenido
+
+Casi todo el texto de la landing se edita en:
+
+- [`src/data/landing.json`](src/data/landing.json) — hero, servicios, expertise, casos, contacto, footer, email, etc.
+- [`src/data/privacy.json`](src/data/privacy.json) — aviso de privacidad
+
+Colores de marca en [`tailwind.config.mjs`](tailwind.config.mjs) (`primary`, `secondary`).
+
+URL del sitio (sitemap / SEO) en [`astro.config.mjs`](astro.config.mjs) → `site`.
+
+---
+
+## Contacto (sitio)
+
+- **Ubicación:** Monterrey, Nuevo León, México  
+- **Email:** contacto@nuvant.com  
+
+Actualiza el correo en `landing.json` y `privacy.json` cuando tengas el definitivo.
+
+---
+
+## Despliegue
+
+El output es **estático** (`dist/`). Puedes publicarlo en Vercel, Netlify, Cloudflare Pages, GitHub Pages u otro hosting estático.
+
+1. `npm run build`
+2. Publica la carpeta `dist/`
+3. Configura el dominio y actualiza `site` en `astro.config.mjs`
+
+---
+
+## Licencia
+
+- Plantilla base: **MIT** — Copyright (c) 2024 Jeremy Camus ([Luna Landing](https://github.com/JimmyCamus/luna-landing)).
+- Contenido, marca e iconografía propios de **Nuvant** (salvo logos de terceros / Salesforce usados con fines de referencia de experiencia).
