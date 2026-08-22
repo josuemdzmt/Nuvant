@@ -46,16 +46,12 @@ El archivo `LICENSE` del repositorio conserva el aviso de copyright original de 
 
 ### 1. Clonar e instalar
 
+Este proyecto usa **npm** (archivo `package-lock.json`). No uses `pnpm-lock.yaml` en el repo: Vercel lo detecta y puede fallar el deploy.
+
 ```bash
 git clone https://github.com/josuemdzmt/Nuvant.git
 cd Nuvant
 npm install
-```
-
-Si usas pnpm:
-
-```bash
-pnpm install
 ```
 
 ### 2. Desarrollo local
