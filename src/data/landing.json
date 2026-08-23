@@ -66,7 +66,7 @@
       {
         "title": "Equipo con experiencia",
         "icon": "FileIcon",
-        "description": "Integramos profesionales con trayectoria en las mismas plataformas, listos para sumarse según el alcance de cada proyecto."
+        "description": "Contamos con profesionales con amplia experiencia, listos para sumarse según el alcance de cada proyecto."
       }
     ]
   },
@@ -82,7 +82,7 @@
           "Sales Cloud y Service Cloud",
           "Field Service y Marketing Cloud",
           "Agentforce y automatización",
-          "Profesionales con experiencia en estas plataformas"
+          "Profesionales con amplia experiencia"
         ]
       },
       {
@@ -171,12 +171,12 @@
         "label": "Años en desarrollo y administración Salesforce"
       },
       {
-        "value": "7",
-        "label": "Certificaciones Salesforce"
-      },
-      {
         "value": "5+",
         "label": "Nubes y productos Salesforce con experiencia"
+      },
+      {
+        "value": "A medida",
+        "label": "Equipo según el alcance de cada proyecto"
       }
     ]
   },
@@ -186,7 +186,7 @@
     "location": "Monterrey, Nuevo León, México",
     "email": "contacto@nuvant.com",
     "emailHref": "mailto:contacto@nuvant.com",
-    "cta": "Escribirnos",
+    "cta": "Contáctanos",
     "ctaHref": "mailto:contacto@nuvant.com"
   },
   "footerData": {
