@@ -7,66 +7,54 @@
   },
   "product": "Physiocloud",
   "title": "Changelog",
-  "subtitle": "Registro oficial de versiones y mejoras de la plataforma de gestión clínica para fisioterapia.",
-  "releases": [
+  "subtitle": "Historial de versiones y mejoras de la plataforma.",
+  "timeline": [
     {
-      "version": "v2.4",
-      "label": "Septiembre 2026",
-      "date": "1 de septiembre de 2026",
-      "status": "released",
-      "highlight": "Integración de Gemini para asistencia clínica inteligente",
-      "summary": "Esta versión incorpora capacidades de inteligencia artificial impulsadas por Google Gemini, optimiza el flujo de consultas y refuerza la seguridad operativa de las clínicas.",
+      "type": "upcoming",
+      "title": "Próximo release",
+      "status": "En construcción",
       "changes": [
         {
-          "category": "Inteligencia artificial",
-          "badge": "Gemini",
-          "title": "Resúmenes clínicos asistidos por IA",
-          "description": "Integración de Google Gemini para generar resúmenes inteligentes de pacientes, consultas e historias clínicas. El equipo clínico obtiene una visión consolidada del expediente en segundos, sin perder el contexto clínico."
+          "title": "Recordatorios de citas automáticos",
+          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias."
+        }
+      ]
+    },
+    {
+      "type": "release",
+      "version": "v2.1",
+      "date": "1 de septiembre de 2026",
+      "summary": "Integración de Google Gemini y mejoras en consultas, reportes y seguridad.",
+      "changes": [
+        {
+          "title": "Resúmenes clínicos con Gemini",
+          "description": "IA para resumir pacientes, consultas e historias clínicas."
         },
         {
-          "category": "Inteligencia artificial",
-          "badge": "Gemini",
-          "title": "Generación de reportes con IA",
-          "description": "Los reportes clínicos pueden elaborarse con asistencia de Gemini, transformando la información capturada en documentación estructurada y lista para entregar, con menor tiempo de redacción."
+          "title": "Reportes generados con IA",
+          "description": "Elaboración de reportes clínicos con asistencia de Gemini."
         },
         {
-          "category": "Consultas",
-          "badge": "Gemini",
-          "title": "Notas SOAP generadas en consulta",
-          "description": "Nueva capacidad para generar notas SOAP (Subjetivo, Objetivo, Análisis y Plan) directamente durante la consulta, con apoyo de Gemini para estructurar la información de forma clara y consistente."
+          "title": "Notas SOAP en consultas",
+          "description": "Generación de notas SOAP con apoyo de Gemini."
         },
         {
-          "category": "Reportes",
-          "title": "Identidad de clínica en documentos",
-          "description": "Los reportes exportados incluyen el logo de la clínica, elevando la presentación profesional ante pacientes, aseguradoras y referencias médicas."
+          "title": "Logo de clínica en reportes",
+          "description": "Los reportes incluyen el logo de la clínica."
         },
         {
-          "category": "Seguridad",
-          "title": "Control de horarios de acceso",
-          "description": "Configuración de ventanas de inicio de sesión por horario laboral. El acceso al sistema queda restringido fuera del horario definido, reforzando la protección de la información clínica."
+          "title": "Horarios de inicio de sesión",
+          "description": "Restricción de acceso según horario laboral configurado."
         },
         {
-          "category": "Experiencia de uso",
-          "title": "Guardado rápido sin redirección",
-          "description": "Nuevo botón de guardado rápido que conserva al usuario en la pantalla actual tras guardar, eliminando interrupciones en el flujo de trabajo y acelerando la captura de información."
+          "title": "Guardado rápido",
+          "description": "Guardar sin salir de la pantalla actual."
         },
         {
-          "category": "Consultas",
-          "title": "Signos vitales en módulo dedicado",
-          "description": "Reorganización del flujo de creación de consultas: los signos vitales se registran en una sección independiente, con una experiencia de captura más ordenada y enfocada."
+          "title": "Signos vitales aparte",
+          "description": "Los signos vitales se capturan en una sección independiente al crear consultas."
         }
       ]
     }
-  ],
-  "upcoming": {
-    "title": "Próximo release",
-    "status": "En construcción",
-    "items": [
-      {
-        "category": "Agenda",
-        "title": "Recordatorios de citas automáticos",
-        "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y optimizar la ocupación de la agenda clínica. Actualmente en desarrollo."
-      }
-    ]
-  }
+  ]
 }
