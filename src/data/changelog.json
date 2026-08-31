@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Changelog | Physiocloud",
+    "description": "Novedades y actualizaciones de Physiocloud: inteligencia artificial con Gemini, consultas, reportes y mejoras de seguridad.",
+    "lang": "es",
+    "charset": "UTF-8"
+  },
+  "product": "Physiocloud",
+  "title": "Changelog",
+  "subtitle": "Registro oficial de versiones y mejoras de la plataforma de gestión clínica para fisioterapia.",
+  "releases": [
+    {
+      "version": "v2.4",
+      "label": "Septiembre 2026",
+      "date": "1 de septiembre de 2026",
+      "status": "released",
+      "highlight": "Integración de Gemini para asistencia clínica inteligente",
+      "summary": "Esta versión incorpora capacidades de inteligencia artificial impulsadas por Google Gemini, optimiza el flujo de consultas y refuerza la seguridad operativa de las clínicas.",
+      "changes": [
+        {
+          "category": "Inteligencia artificial",
+          "badge": "Gemini",
+          "title": "Resúmenes clínicos asistidos por IA",
+          "description": "Integración de Google Gemini para generar resúmenes inteligentes de pacientes, consultas e historias clínicas. El equipo clínico obtiene una visión consolidada del expediente en segundos, sin perder el contexto clínico."
+        },
+        {
+          "category": "Inteligencia artificial",
+          "badge": "Gemini",
+          "title": "Generación de reportes con IA",
+          "description": "Los reportes clínicos pueden elaborarse con asistencia de Gemini, transformando la información capturada en documentación estructurada y lista para entregar, con menor tiempo de redacción."
+        },
+        {
+          "category": "Consultas",
+          "badge": "Gemini",
+          "title": "Notas SOAP generadas en consulta",
+          "description": "Nueva capacidad para generar notas SOAP (Subjetivo, Objetivo, Análisis y Plan) directamente durante la consulta, con apoyo de Gemini para estructurar la información de forma clara y consistente."
+        },
+        {
+          "category": "Reportes",
+          "title": "Identidad de clínica en documentos",
+          "description": "Los reportes exportados incluyen el logo de la clínica, elevando la presentación profesional ante pacientes, aseguradoras y referencias médicas."
+        },
+        {
+          "category": "Seguridad",
+          "title": "Control de horarios de acceso",
+          "description": "Configuración de ventanas de inicio de sesión por horario laboral. El acceso al sistema queda restringido fuera del horario definido, reforzando la protección de la información clínica."
+        },
+        {
+          "category": "Experiencia de uso",
+          "title": "Guardado rápido sin redirección",
+          "description": "Nuevo botón de guardado rápido que conserva al usuario en la pantalla actual tras guardar, eliminando interrupciones en el flujo de trabajo y acelerando la captura de información."
+        },
+        {
+          "category": "Consultas",
+          "title": "Signos vitales en módulo dedicado",
+          "description": "Reorganización del flujo de creación de consultas: los signos vitales se registran en una sección independiente, con una experiencia de captura más ordenada y enfocada."
+        }
+      ]
+    }
+  ],
+  "upcoming": {
+    "title": "Próximo release",
+    "status": "En construcción",
+    "items": [
+      {
+        "category": "Agenda",
+        "title": "Recordatorios de citas automáticos",
+        "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y optimizar la ocupación de la agenda clínica. Actualmente en desarrollo."
+      }
+    ]
+  }
+}
