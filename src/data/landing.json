@@ -199,7 +199,8 @@
       { "label": "Expertise", "href": "/#expertise-section" },
       { "label": "Casos", "href": "/#cases-section" },
       { "label": "Contacto", "href": "/#contacto" },
-      { "label": "Aviso de privacidad", "href": "/privacidad" }
+      { "label": "Aviso de privacidad", "href": "/privacidad" },
+      { "label": "Changelog Physiocloud", "href": "/changelog" }
     ],
     "socials": []
   }
