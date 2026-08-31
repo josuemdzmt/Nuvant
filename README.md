@@ -126,7 +126,7 @@ URL del sitio (sitemap / SEO) en [`astro.config.mjs`](astro.config.mjs) → `sit
 ## Contacto (sitio)
 
 - **Ubicación:** Monterrey, Nuevo León, México  
-- **Email:** contacto@nuvant.com  
+- **Email:** contacto@nuvant.mx  
 
 Actualiza el correo en `landing.json` y `privacy.json` cuando tengas el definitivo.
 

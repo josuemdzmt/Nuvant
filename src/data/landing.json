@@ -19,7 +19,7 @@
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "contacto@nuvant.com",
+        "email": "contacto@nuvant.mx",
         "contactType": "Servicio al cliente",
         "areaServed": "MX"
       },
@@ -41,7 +41,7 @@
     "highlightedTitle": "Nuvant",
     "subTitle": "Somos una consultora tecnológica con experiencia en Salesforce y en desarrollo de software a medida. Diseñamos e implementamos lo que tu operación realmente necesita.",
     "primaryCta": "Contactar",
-    "primaryCtaHref": "mailto:contacto@nuvant.com",
+    "primaryCtaHref": "mailto:contacto@nuvant.mx",
     "secondaryCta": "Ver servicios",
     "secondaryCtaHref": "#services-section"
   },
@@ -184,10 +184,10 @@
     "title": "Contacto",
     "description": "Cuéntanos qué necesitas. Estamos en Monterrey y listos para acompañarte en Salesforce o en software a medida.",
     "location": "Monterrey, Nuevo León, México",
-    "email": "contacto@nuvant.com",
-    "emailHref": "mailto:contacto@nuvant.com",
+    "email": "contacto@nuvant.mx",
+    "emailHref": "mailto:contacto@nuvant.mx",
     "cta": "Contáctanos",
-    "ctaHref": "mailto:contacto@nuvant.com"
+    "ctaHref": "mailto:contacto@nuvant.mx"
   },
   "footerData": {
     "logo": "Nuvant",
