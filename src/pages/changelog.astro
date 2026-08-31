@@ -1,0 +1,93 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Action from "@/components/Action.astro";
+import changelogData from "@/data/changelog.json";
+import landingData from "@/data/landing.json";
+
+const meta = {
+  ...landingData.meta,
+  title: changelogData.meta.title,
+  description: changelogData.meta.description,
+  lang: changelogData.meta.lang,
+  charset: changelogData.meta.charset,
+};
+
+const categoryColors: Record<string, string> = {
+  "Inteligencia artificial": "bg-primary/10 text-primary",
+  Consultas: "bg-secondary/10 text-secondary",
+  Reportes: "bg-amber-500/10 text-amber-700",
+  Seguridad: "bg-rose-500/10 text-rose-700",
+  "Experiencia de uso": "bg-slate-500/10 text-slate-700",
+};
+---
+
+<Layout meta={meta}>
+  <header class="w-full flex justify-center h-20 border-b border-slate-200 bg-white">
+    <nav class="flex flex-row items-center justify-between w-11/12 md:w-3/4" aria-label="Navegación">
+      <Action as="a" href="/" title={changelogData.product} class="inline-flex items-center gap-2">
+        <span class="text-xl md:text-2xl font-semibold text-primary">{changelogData.product}</span>
+      </Action>
+      <Action as="a" type="text" href="/" class="text-base md:text-lg">
+        Volver al inicio
+      </Action>
+    </nav>
+  </header>
+
+  <main class="flex flex-col items-center px-4 py-16 md:py-24">
+    <article class="w-full max-w-3xl">
+      <header class="mb-12">
+        <h1 class="text-3xl md:text-5xl font-semibold mb-4">{changelogData.title}</h1>
+        <p class="text-base md:text-lg opacity-70 text-pretty leading-relaxed">
+          {changelogData.subtitle}
+        </p>
+      </header>
+
+      <div class="flex flex-col gap-y-16">
+        {
+          changelogData.releases.map((release) => (
+            <section class="relative">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-8 pb-6 border-b border-slate-200">
+                <h2 class="text-2xl md:text-3xl font-semibold">{release.version}</h2>
+                <time class="text-sm md:text-base opacity-70" datetime="2026-09-01">
+                  {release.date}
+                </time>
+              </div>
+
+              <p class="text-base md:text-lg opacity-80 mb-8 text-pretty leading-relaxed">
+                {release.summary}
+              </p>
+
+              <ul class="flex flex-col gap-y-6" role="list">
+                {release.changes.map((change) => (
+                  <li class="rounded-xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm">
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                      <span
+                        class:list={[
+                          "inline-flex items-center rounded-full px-3 py-1 text-xs font-medium",
+                          categoryColors[change.category] ?? "bg-slate-100 text-slate-700",
+                        ]}
+                      >
+                        {change.category}
+                      </span>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">{change.title}</h3>
+                    <p class="text-base opacity-90 text-pretty leading-relaxed">{change.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+    </article>
+  </main>
+
+  <footer class="flex flex-col items-center gap-y-2 py-8 border-t border-slate-200 text-sm opacity-70">
+    <p>
+      <Action as="a" type="text" href="/">{changelogData.product}</Action>
+      {" · "}
+      <Action as="a" type="text" href="mailto:contacto@nuvant.com">contacto@nuvant.com</Action>
+    </p>
+    <p>Monterrey, Nuevo León, México</p>
+  </footer>
+</Layout>

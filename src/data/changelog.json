@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Changelog | Physiocloud",
+    "description": "Novedades y actualizaciones de Physiocloud: inteligencia artificial, consultas, reportes y mejoras de seguridad.",
+    "lang": "es",
+    "charset": "UTF-8"
+  },
+  "product": "Physiocloud",
+  "title": "Changelog",
+  "subtitle": "Historial de cambios y nuevas funcionalidades de la plataforma de gestión clínica para fisioterapia.",
+  "releases": [
+    {
+      "version": "Septiembre 2026",
+      "date": "1 de septiembre de 2026",
+      "summary": "Actualización enfocada en inteligencia artificial, reportes clínicos y mejoras en el flujo de consultas.",
+      "changes": [
+        {
+          "category": "Inteligencia artificial",
+          "title": "Resúmenes clínicos con IA",
+          "description": "Incorporación de inteligencia artificial para generar resúmenes de pacientes, consultas e historias clínicas, facilitando una visión rápida y clara del expediente."
+        },
+        {
+          "category": "Inteligencia artificial",
+          "title": "Generación de reportes con IA",
+          "description": "Los reportes clínicos ahora pueden generarse con asistencia de inteligencia artificial, agilizando la documentación y reduciendo el tiempo de captura."
+        },
+        {
+          "category": "Consultas",
+          "title": "Generación de notas SOAP",
+          "description": "Nueva funcionalidad para generar notas SOAP directamente en las consultas, estructurando la información en Subjetivo, Objetivo, Análisis y Plan."
+        },
+        {
+          "category": "Reportes",
+          "title": "Logo de clínica en reportes",
+          "description": "Los reportes generados incluyen el logo de la clínica, reforzando la identidad visual y la presentación profesional ante pacientes y terceros."
+        },
+        {
+          "category": "Seguridad",
+          "title": "Horarios de inicio de sesión",
+          "description": "Nueva capa de seguridad que permite restringir el acceso al sistema según horarios configurados, protegiendo la información clínica fuera del horario laboral."
+        },
+        {
+          "category": "Experiencia de uso",
+          "title": "Guardado rápido sin redirección",
+          "description": "Nuevo botón de guardado rápido que conserva al usuario en la misma pantalla al guardar, evitando redirecciones innecesarias y mejorando el flujo de trabajo."
+        },
+        {
+          "category": "Consultas",
+          "title": "Signos vitales en sección aparte",
+          "description": "Ajustes en la creación de consultas: los signos vitales ahora se capturan en una sección independiente, organizando mejor la información y simplificando el registro."
+        }
+      ]
+    }
+  ]
+}
