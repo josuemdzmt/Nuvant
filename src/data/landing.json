@@ -200,7 +200,7 @@
       { "label": "Casos", "href": "/#cases-section" },
       { "label": "Contacto", "href": "/#contacto" },
       { "label": "Aviso de privacidad", "href": "/privacidad" },
-      { "label": "Changelog Physiocloud", "href": "/changelog" }
+      { "label": "Changelog Physiocloud", "href": "/pc-changelog" }
     ],
     "socials": []
   }
