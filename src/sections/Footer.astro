@@ -12,8 +12,8 @@ const { data } = Astro.props;
 <footer
   class="flex flex-col justify-center text-center gap-y-8 pt-12 pb-10 bg-black text-white w-full"
 >
-  <section>
-    <Action as="a" type="text" class="inline-flex justify-center" href="/" title={data.logo}>
+  <section class="flex justify-center items-center w-full">
+    <Action as="a" href="/" title={data.logo} class="inline-flex items-center justify-center">
       <img
         src={data.logoImg}
         alt={data.logo}
