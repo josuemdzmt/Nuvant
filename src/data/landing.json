@@ -31,7 +31,7 @@
     "logoImg": "/logo-nuvant.svg",
     "links": [
       { "label": "Servicios", "href": "#services-section" },
-      { "label": "Expertise", "href": "#expertise-section" },
+      { "label": "Experiencia", "href": "#expertise-section" },
       { "label": "Casos", "href": "#cases-section" },
       { "label": "Contacto", "href": "#contacto" }
     ]
@@ -196,11 +196,10 @@
     "location": "Monterrey, Nuevo León, México",
     "links": [
       { "label": "Servicios", "href": "/#services-section" },
-      { "label": "Expertise", "href": "/#expertise-section" },
+      { "label": "Experiencia", "href": "/#expertise-section" },
       { "label": "Casos", "href": "/#cases-section" },
       { "label": "Contacto", "href": "/#contacto" },
-      { "label": "Aviso de privacidad", "href": "/privacidad" },
-      { "label": "Changelog Physiocloud", "href": "/pc-changelog" }
+      { "label": "Aviso de privacidad", "href": "/privacidad" }
     ],
     "socials": []
   }
