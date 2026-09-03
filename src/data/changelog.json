@@ -8,51 +8,72 @@
   "product": "Physiocloud",
   "title": "Changelog",
   "subtitle": "Historial de versiones y mejoras de la plataforma.",
-  "timeline": [
+  "releases": [
     {
+      "id": "2-2-0",
       "type": "upcoming",
-      "title": "Próximo release",
+      "version": "2.2.0",
+      "label": "Próximo release",
       "status": "En construcción",
+      "summary": "Mejoras operativas en agenda multi sucursal, inteligencia artificial en el dashboard, recordatorios automáticos y optimizaciones de rendimiento.",
       "changes": [
         {
           "title": "Recordatorios de citas automáticos",
-          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias."
+          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y mejorar la ocupación de la agenda clínica."
+        },
+        {
+          "title": "Mejoras en agenda multi sucursal",
+          "description": "Evolución de la agenda para clínicas con varias sucursales: mejor organización de horarios, recursos y disponibilidad entre sedes, con una experiencia más clara para el equipo operativo."
+        },
+        {
+          "title": "IA en el dashboard",
+          "description": "Incorporación de asistencia con inteligencia artificial en el dashboard para destacar información relevante, facilitar el seguimiento del día a día y apoyar la toma de decisiones clínicas y operativas."
+        },
+        {
+          "title": "Mejoras de rendimiento",
+          "description": "Optimizaciones de velocidad y estabilidad en pantallas clave de la plataforma para una experiencia más fluida en el uso cotidiano."
         }
       ]
     },
     {
+      "id": "2-1-0",
       "type": "release",
-      "version": "v2.1",
+      "version": "2.1.0",
       "date": "1 de septiembre de 2026",
-      "summary": "Integración de Google Gemini y mejoras en consultas, reportes y seguridad.",
+      "dateIso": "2026-09-01",
+      "summary": "Integración de Google Gemini para asistencia clínica, mejoras en el flujo de consultas y reportes, refuerzo de seguridad de acceso y nuevos límites de plataforma para un uso más controlado.",
       "changes": [
         {
           "title": "Resúmenes clínicos con Gemini",
-          "description": "IA para resumir pacientes, consultas e historias clínicas."
+          "description": "Incorporamos Google Gemini para generar resúmenes inteligentes de pacientes, consultas e historias clínicas. El equipo clínico puede obtener una visión consolidada del expediente en segundos, sin perder contexto ni reescribir información ya capturada."
         },
         {
           "title": "Reportes generados con IA",
-          "description": "Elaboración de reportes clínicos con asistencia de Gemini."
+          "description": "Los reportes clínicos pueden elaborarse con asistencia de Gemini a partir de la información del expediente. Esto reduce el tiempo de redacción, mantiene un formato más consistente y facilita entregar documentación lista para el paciente o para referencia médica."
         },
         {
           "title": "Notas SOAP en consultas",
-          "description": "Generación de notas SOAP con apoyo de Gemini."
+          "description": "Nueva capacidad para generar notas SOAP (Subjetivo, Objetivo, Análisis y Plan) directamente durante la consulta, con apoyo de Gemini. Ayuda a estructurar la información clínica de forma clara, homogénea y alineada al flujo real de atención."
         },
         {
           "title": "Logo de clínica en reportes",
-          "description": "Los reportes incluyen el logo de la clínica."
+          "description": "Los reportes exportados incluyen el logo de la clínica, reforzando la identidad visual y elevando la presentación profesional ante pacientes, aseguradoras y referencias médicas."
         },
         {
           "title": "Horarios de inicio de sesión",
-          "description": "Restricción de acceso según horario laboral configurado."
+          "description": "Se puede restringir el acceso al sistema según horarios laborales configurados. Fuera de esa ventana, el inicio de sesión queda bloqueado para proteger la información clínica y reforzar el control operativo de la clínica."
         },
         {
           "title": "Guardado rápido",
-          "description": "Guardar sin salir de la pantalla actual."
+          "description": "Nuevo botón de guardado rápido que conserva al usuario en la misma pantalla al guardar. Evita redirecciones innecesarias, reduce interrupciones y acelera la captura diaria de información clínica."
         },
         {
           "title": "Signos vitales aparte",
-          "description": "Los signos vitales se capturan en una sección independiente al crear consultas."
+          "description": "Ajuste en la creación de consultas: los signos vitales se capturan en una sección independiente. El registro queda más ordenado, el flujo de creación es más claro y se separa mejor la información vital del resto de la nota clínica."
+        },
+        {
+          "title": "Límites de plataforma",
+          "description": "Se incorporan límites de plataforma para controlar el uso de recursos según la configuración de cada clínica (por ejemplo, capacidad operativa y consumo de funcionalidades). Esto permite un crecimiento más ordenado, evita usos no previstos y da mayor previsibilidad sobre el alcance disponible en el entorno."
         }
       ]
     }

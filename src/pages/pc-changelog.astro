@@ -11,6 +11,8 @@ const meta = {
   lang: changelogData.meta.lang,
   charset: changelogData.meta.charset,
 };
+
+const defaultReleaseId = changelogData.releases[0]?.id;
 ---
 
 <Layout meta={meta}>
@@ -26,63 +28,99 @@ const meta = {
   </header>
 
   <main class="flex flex-col items-center px-4 py-16 md:py-24">
-    <article class="w-full max-w-2xl">
-      <header class="mb-12">
+    <article class="w-full max-w-5xl">
+      <header class="mb-10 md:mb-12">
         <h1 class="text-3xl md:text-4xl font-semibold mb-3">{changelogData.title}</h1>
         <p class="text-base md:text-lg opacity-70">{changelogData.subtitle}</p>
       </header>
 
-      <ol class="relative border-l-2 border-slate-200 ml-3 md:ml-4" role="list">
-        {
-          changelogData.timeline.map((entry) => (
-            <li class="mb-12 last:mb-0 pl-8 md:pl-10 relative">
-              <span
-                class:list={[
-                  "absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-white",
-                  entry.type === "upcoming" ? "bg-amber-400" : "bg-primary",
-                ]}
-                aria-hidden="true"
-              />
-
-              {entry.type === "upcoming" ? (
-                <div>
-                  <div class="flex flex-wrap items-center gap-2 mb-4">
-                    <h2 class="text-lg font-semibold">{entry.title}</h2>
-                    <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
-                      {entry.status}
+      <div class="flex flex-col md:flex-row gap-8 md:gap-10">
+        <nav
+          class="md:w-56 shrink-0"
+          aria-label="Versiones"
+          data-changelog-nav
+        >
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
+            Versiones
+          </p>
+          <ul class="flex flex-row md:flex-col gap-2 overflow-x-auto pb-1 md:pb-0" role="list">
+            {
+              changelogData.releases.map((release, index) => (
+                <li class="shrink-0">
+                  <button
+                    type="button"
+                    data-release-trigger={release.id}
+                    aria-pressed={index === 0 ? "true" : "false"}
+                    class:list={[
+                      "w-full text-left rounded-lg border px-3 py-2.5 transition",
+                      index === 0
+                        ? "border-primary bg-primary/5 text-primary"
+                        : "border-slate-200 bg-white text-slate-700 hover:border-slate-300",
+                    ]}
+                  >
+                    <span class="block text-sm font-semibold">{release.version}</span>
+                    <span class="block text-xs mt-0.5 opacity-70">
+                      {release.type === "upcoming"
+                        ? release.status
+                        : release.date}
                     </span>
+                  </button>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="flex-1 min-w-0" data-changelog-panels>
+          {
+            changelogData.releases.map((release, index) => (
+              <section
+                data-release-panel={release.id}
+                hidden={index !== 0}
+                aria-labelledby={`release-heading-${release.id}`}
+              >
+                <div class="mb-6 pb-5 border-b border-slate-200">
+                  <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <h2
+                      id={`release-heading-${release.id}`}
+                      class="text-xl md:text-2xl font-semibold"
+                    >
+                      {release.type === "upcoming"
+                        ? `${release.version} · ${release.label}`
+                        : release.version}
+                    </h2>
+                    {release.type === "upcoming" ? (
+                      <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
+                        {release.status}
+                      </span>
+                    ) : (
+                      <time class="text-sm text-slate-500" datetime={release.dateIso}>
+                        {release.date}
+                      </time>
+                    )}
                   </div>
-                  <ul class="flex flex-col gap-y-3" role="list">
-                    {entry.changes.map((change) => (
-                      <li class="text-slate-600">
-                        <p class="font-medium text-slate-900">{change.title}</p>
-                        <p class="text-sm mt-0.5">{change.description}</p>
-                      </li>
-                    ))}
-                  </ul>
+                  <p class="text-sm md:text-base text-slate-600 text-pretty leading-relaxed">
+                    {release.summary}
+                  </p>
                 </div>
-              ) : (
-                <div>
-                  <div class="mb-1">
-                    <span class="text-sm font-semibold text-primary">{entry.version}</span>
-                    <span class="text-sm text-slate-400 mx-2">·</span>
-                    <time class="text-sm text-slate-500" datetime="2026-09-01">{entry.date}</time>
-                  </div>
-                  <p class="text-sm text-slate-600 mb-4">{entry.summary}</p>
-                  <ul class="flex flex-col gap-y-3" role="list">
-                    {entry.changes.map((change) => (
-                      <li class="text-slate-600">
-                        <p class="font-medium text-slate-900">{change.title}</p>
-                        <p class="text-sm mt-0.5">{change.description}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          ))
-        }
-      </ol>
+
+                <ul class="flex flex-col gap-y-5" role="list">
+                  {release.changes.map((change) => (
+                    <li>
+                      <h3 class="text-base md:text-lg font-semibold text-slate-900 mb-1">
+                        {change.title}
+                      </h3>
+                      <p class="text-sm md:text-base text-slate-600 text-pretty leading-relaxed">
+                        {change.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))
+          }
+        </div>
+      </div>
     </article>
   </main>
 
@@ -95,3 +133,34 @@ const meta = {
     <p>Monterrey, Nuevo León, México</p>
   </footer>
 </Layout>
+
+<script is:inline define:vars={{ defaultReleaseId }}>
+  const triggers = document.querySelectorAll("[data-release-trigger]");
+  const panels = document.querySelectorAll("[data-release-panel]");
+
+  function setActiveRelease(id) {
+    triggers.forEach((trigger) => {
+      const isActive = trigger.getAttribute("data-release-trigger") === id;
+      trigger.setAttribute("aria-pressed", isActive ? "true" : "false");
+      trigger.classList.toggle("border-primary", isActive);
+      trigger.classList.toggle("bg-primary/5", isActive);
+      trigger.classList.toggle("text-primary", isActive);
+      trigger.classList.toggle("border-slate-200", !isActive);
+      trigger.classList.toggle("bg-white", !isActive);
+      trigger.classList.toggle("text-slate-700", !isActive);
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.getAttribute("data-release-panel") !== id;
+    });
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const id = trigger.getAttribute("data-release-trigger");
+      if (id) setActiveRelease(id);
+    });
+  });
+
+  if (defaultReleaseId) setActiveRelease(defaultReleaseId);
+</script>
