@@ -12,7 +12,8 @@ const meta = {
   charset: changelogData.meta.charset,
 };
 
-const defaultReleaseId = changelogData.releases[0]?.id;
+const allReleases = changelogData.families.flatMap((family) => family.releases);
+const defaultReleaseId = allReleases[0]?.id;
 ---
 
 <Layout meta={meta}>
@@ -43,28 +44,41 @@ const defaultReleaseId = changelogData.releases[0]?.id;
           <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
             Versiones
           </p>
-          <ul class="flex flex-row md:flex-col gap-2 overflow-x-auto pb-1 md:pb-0" role="list">
+          <ul class="flex flex-col gap-4" role="list">
             {
-              changelogData.releases.map((release, index) => (
-                <li class="shrink-0">
-                  <button
-                    type="button"
-                    data-release-trigger={release.id}
-                    aria-pressed={index === 0 ? "true" : "false"}
-                    class:list={[
-                      "w-full text-left rounded-lg border px-3 py-2.5 transition",
-                      index === 0
-                        ? "border-primary bg-primary/5 text-primary"
-                        : "border-slate-200 bg-white text-slate-700 hover:border-slate-300",
-                    ]}
-                  >
-                    <span class="block text-sm font-semibold">{release.version}</span>
-                    <span class="block text-xs mt-0.5 opacity-70">
-                      {release.type === "upcoming"
-                        ? release.status
-                        : release.date}
-                    </span>
-                  </button>
+              changelogData.families.map((family) => (
+                <li>
+                  <p class="text-sm font-semibold text-slate-900 mb-2 px-1">
+                    {family.label}
+                  </p>
+                  <ul class="flex flex-row md:flex-col gap-2 overflow-x-auto pb-1 md:pb-0 md:border-l md:border-slate-200 md:pl-3" role="list">
+                    {family.releases.map((release, index) => {
+                      const isDefault =
+                        release.id === defaultReleaseId;
+                      return (
+                        <li class="shrink-0">
+                          <button
+                            type="button"
+                            data-release-trigger={release.id}
+                            aria-pressed={isDefault ? "true" : "false"}
+                            class:list={[
+                              "w-full text-left rounded-lg border px-3 py-2.5 transition",
+                              isDefault
+                                ? "border-primary bg-primary/5 text-primary"
+                                : "border-slate-200 bg-white text-slate-700 hover:border-slate-300",
+                            ]}
+                          >
+                            <span class="block text-sm font-semibold">{release.version}</span>
+                            <span class="block text-xs mt-0.5 opacity-70">
+                              {release.type === "upcoming"
+                                ? release.status
+                                : release.date}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </li>
               ))
             }
@@ -73,7 +87,7 @@ const defaultReleaseId = changelogData.releases[0]?.id;
 
         <div class="flex-1 min-w-0" data-changelog-panels>
           {
-            changelogData.releases.map((release, index) => (
+            allReleases.map((release, index) => (
               <section
                 data-release-panel={release.id}
                 hidden={index !== 0}
@@ -92,7 +106,10 @@ const defaultReleaseId = changelogData.releases[0]?.id;
                         {release.status}
                       </span>
                     ) : (
-                      <time class="text-sm text-slate-500" datetime={"dateIso" in release ? release.dateIso : undefined}>
+                      <time
+                        class="text-sm text-slate-500"
+                        datetime={"dateIso" in release ? release.dateIso : undefined}
+                      >
                         {"date" in release ? release.date : ""}
                       </time>
                     )}
