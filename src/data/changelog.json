@@ -8,10 +8,11 @@
   "product": "Physiocloud",
   "title": "Changelog",
   "subtitle": "Historial de versiones y mejoras de la plataforma.",
-  "families": [
+  "nav": [
     {
-      "id": "2",
-      "label": "2",
+      "id": "version-2",
+      "label": "Version 2",
+      "type": "family",
       "releases": [
         {
           "id": "2-2-0",
@@ -72,31 +73,31 @@
               "description": "Se incorporan límites de plataforma para controlar el uso de recursos según la configuración de cada clínica (por ejemplo, capacidad operativa y consumo de funcionalidades). Esto permite un crecimiento más ordenado, evita usos no previstos y da mayor previsibilidad sobre el alcance disponible en el entorno."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "upcoming",
+      "label": "Próximos releases",
+      "type": "upcoming",
+      "status": "En construcción",
+      "summary": "Funcionalidades en desarrollo para próximas versiones de Physiocloud.",
+      "changes": [
+        {
+          "title": "Recordatorios de citas automáticos",
+          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y mejorar la ocupación de la agenda clínica."
         },
         {
-          "id": "upcoming",
-          "type": "upcoming",
-          "version": "Próximos releases",
-          "status": "En construcción",
-          "summary": "Funcionalidades en desarrollo para próximas versiones de Physiocloud.",
-          "changes": [
-            {
-              "title": "Recordatorios de citas automáticos",
-              "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y mejorar la ocupación de la agenda clínica."
-            },
-            {
-              "title": "Mejoras en agenda multi sucursal",
-              "description": "Evolución de la agenda para clínicas con varias sucursales: mejor organización de horarios, recursos y disponibilidad entre sedes, con una experiencia más clara para el equipo operativo."
-            },
-            {
-              "title": "IA en el dashboard",
-              "description": "Incorporación de asistencia con inteligencia artificial en el dashboard para destacar información relevante, facilitar el seguimiento del día a día y apoyar la toma de decisiones clínicas y operativas."
-            },
-            {
-              "title": "Mejoras de rendimiento",
-              "description": "Optimizaciones de velocidad y estabilidad en pantallas clave de la plataforma para una experiencia más fluida en el uso cotidiano."
-            }
-          ]
+          "title": "Mejoras en agenda multi sucursal",
+          "description": "Evolución de la agenda para clínicas con varias sucursales: mejor organización de horarios, recursos y disponibilidad entre sedes, con una experiencia más clara para el equipo operativo."
+        },
+        {
+          "title": "IA en el dashboard",
+          "description": "Incorporación de asistencia con inteligencia artificial en el dashboard para destacar información relevante, facilitar el seguimiento del día a día y apoyar la toma de decisiones clínicas y operativas."
+        },
+        {
+          "title": "Mejoras de rendimiento",
+          "description": "Optimizaciones de velocidad y estabilidad en pantallas clave de la plataforma para una experiencia más fluida en el uso cotidiano."
         }
       ]
     }
