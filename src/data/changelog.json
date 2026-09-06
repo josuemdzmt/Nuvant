@@ -11,27 +11,19 @@
   "releases": [
     {
       "id": "2-2-0",
-      "type": "upcoming",
+      "type": "release",
       "version": "2.2.0",
-      "label": "Próximo release",
-      "status": "En construcción",
-      "summary": "Mejoras operativas en agenda multi sucursal, inteligencia artificial en el dashboard, recordatorios automáticos y optimizaciones de rendimiento.",
+      "date": "6 de septiembre de 2026",
+      "dateIso": "2026-09-06",
+      "summary": "Refuerzo de seguridad en el acceso a la plataforma: validación de ubicación al iniciar sesión e incorporación de una capa adicional de protección perimetral.",
       "changes": [
         {
-          "title": "Recordatorios de citas automáticos",
-          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y mejorar la ocupación de la agenda clínica."
+          "title": "Ubicación requerida para inicio de sesión",
+          "description": "A partir de esta versión, el inicio de sesión requiere capturar la ubicación del dispositivo como medida adicional de seguridad. Esto ayuda a detectar accesos desde lugares no habituales, reforzar la trazabilidad de las sesiones y proteger mejor la información clínica frente a intentos de acceso no autorizados."
         },
         {
-          "title": "Mejoras en agenda multi sucursal",
-          "description": "Evolución de la agenda para clínicas con varias sucursales: mejor organización de horarios, recursos y disponibilidad entre sedes, con una experiencia más clara para el equipo operativo."
-        },
-        {
-          "title": "IA en el dashboard",
-          "description": "Incorporación de asistencia con inteligencia artificial en el dashboard para destacar información relevante, facilitar el seguimiento del día a día y apoyar la toma de decisiones clínicas y operativas."
-        },
-        {
-          "title": "Mejoras de rendimiento",
-          "description": "Optimizaciones de velocidad y estabilidad en pantallas clave de la plataforma para una experiencia más fluida en el uso cotidiano."
+          "title": "Nueva capa de seguridad perimetral",
+          "description": "Se añade una capa adicional de protección frente a la plataforma. Refuerza la seguridad perimetral, ayuda a mitigar tráfico malicioso y ataques comunes, y mejora la disponibilidad y el control del acceso a los servicios de Physiocloud."
         }
       ]
     },
@@ -74,6 +66,31 @@
         {
           "title": "Límites de plataforma",
           "description": "Se incorporan límites de plataforma para controlar el uso de recursos según la configuración de cada clínica (por ejemplo, capacidad operativa y consumo de funcionalidades). Esto permite un crecimiento más ordenado, evita usos no previstos y da mayor previsibilidad sobre el alcance disponible en el entorno."
+        }
+      ]
+    },
+    {
+      "id": "upcoming",
+      "type": "upcoming",
+      "version": "Próximos releases",
+      "status": "En construcción",
+      "summary": "Funcionalidades en desarrollo para próximas versiones de Physiocloud.",
+      "changes": [
+        {
+          "title": "Recordatorios de citas automáticos",
+          "description": "Envío automático de recordatorios a pacientes para reducir inasistencias y mejorar la ocupación de la agenda clínica."
+        },
+        {
+          "title": "Mejoras en agenda multi sucursal",
+          "description": "Evolución de la agenda para clínicas con varias sucursales: mejor organización de horarios, recursos y disponibilidad entre sedes, con una experiencia más clara para el equipo operativo."
+        },
+        {
+          "title": "IA en el dashboard",
+          "description": "Incorporación de asistencia con inteligencia artificial en el dashboard para destacar información relevante, facilitar el seguimiento del día a día y apoyar la toma de decisiones clínicas y operativas."
+        },
+        {
+          "title": "Mejoras de rendimiento",
+          "description": "Optimizaciones de velocidad y estabilidad en pantallas clave de la plataforma para una experiencia más fluida en el uso cotidiano."
         }
       ]
     }

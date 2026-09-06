@@ -85,17 +85,15 @@ const defaultReleaseId = changelogData.releases[0]?.id;
                       id={`release-heading-${release.id}`}
                       class="text-xl md:text-2xl font-semibold"
                     >
-                      {release.type === "upcoming"
-                        ? `${release.version} · ${release.label}`
-                        : release.version}
+                      {release.version}
                     </h2>
                     {release.type === "upcoming" ? (
                       <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
                         {release.status}
                       </span>
                     ) : (
-                      <time class="text-sm text-slate-500" datetime={release.dateIso}>
-                        {release.date}
+                      <time class="text-sm text-slate-500" datetime={"dateIso" in release ? release.dateIso : undefined}>
+                        {"date" in release ? release.date : ""}
                       </time>
                     )}
                   </div>
