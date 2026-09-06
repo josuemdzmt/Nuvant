@@ -52,7 +52,7 @@ const defaultReleaseId = allReleases[0]?.id;
                     {family.label}
                   </p>
                   <ul class="flex flex-row md:flex-col gap-2 overflow-x-auto pb-1 md:pb-0 md:border-l md:border-slate-200 md:pl-3" role="list">
-                    {family.releases.map((release, index) => {
+                    {family.releases.map((release) => {
                       const isDefault =
                         release.id === defaultReleaseId;
                       return (
